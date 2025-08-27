@@ -31,7 +31,7 @@ class OrientacionRepository:
         :return: Lista de orientacion.
         """
         return db.session.query(Orientacion).all()
-    
+
     @staticmethod
     def actualizar_orientacion(orientacion) -> Orientacion:
         """
