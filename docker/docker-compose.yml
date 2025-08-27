@@ -1,0 +1,20 @@
+services:
+    estructura:
+        build: 
+          context: ../
+          dockerfile: Dockerfile
+        image: flask-sysacad:v1.0.0
+        container_name: flask_sysacad
+
+        networks:
+          - mired
+        ports:
+          - 5000:5000
+        environment:
+          - FLASK_CONTEXT=${FLASK_CONTEXT}
+          - SQLALCHEMY_TRACK_MODIFICATIONS=${SQLALCHEMY_TRACK_MODIFICATIONS}  
+          - SQLALCHEMY_RECORD_QUERIES=${SQLALCHEMY_RECORD_QUERIES}
+          - PROD_DATABASE_URI= postgresql://postgres:221823@localhost:5432/SYSACAD
+networks:
+    mired:
+        external: true
