@@ -1,4 +1,4 @@
-# SYSACAD
+# SYSACAD CLON
 
 ## Descripción
 SysAcad es una API REST de gestión académica construida con **Flask**, **SQLAlchemy**, **Marshmallow** y **PostgreSQL**.
